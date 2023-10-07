@@ -10,11 +10,11 @@ api_url = 'https://api.api-ninjas.com/v1/geocoding'
 
 response = requests.get(api_url,params= Params, headers={'X-Api-Key': 'F9tx2seTwD/pDYXlAlrMqQ==fNQVAusbN1ooGivJ'})
 
-print(response.text)
+#print(response.text)
 
 coordinates = response.json()
 
-print(type(coordinates))
+#print(type(coordinates))
 
 for item in coordinates:
     if "latitude" in item:
@@ -34,8 +34,8 @@ api_weather = "https://api.openweathermap.org/data/2.5/weather"
 response = requests.get(api_weather, params=Params)
 
 values = response.json()
-print(values)
-print(type(values))
+#print(values)
+#print(type(values))
 
 for mains,temps in values["main"].items():
     print(mains , temps)
